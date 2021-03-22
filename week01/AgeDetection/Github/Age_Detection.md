@@ -6,6 +6,8 @@
 
 ### 01. What is age detection?
 
+![image01]()
+
 * Age detection: 얼굴 사진 만으로 사람의 나이를 자동으로 알아보는 과정
 
 * Age detection 2-stage process
@@ -31,9 +33,20 @@
 
 ### 02. Our age detector deep learning model
 
+![image02]()
+
+* The deep learning age detector model 
+  * 2015년에 Levi와 Hassner가 구현한 model로 8가지 연령층을 학습하는 단순화된 AlexNet 구조를 사용
+  * 8가지 연령층: 0-2, 4-6, 8-12, 15-20, 25-32, 38-43, 48-53, 60-100 -> 비연속적
+  * 모델을 교육하는데 사용되는 Adience dataset에서 연령 범위를 정의하기 위해 age brackets을 비연속적으로 설정
+
 <br>
 
 ### 03. Why aren’t we treating age prediction as a regression problem?
+
+* 나이 예측은 외모에만 근거하며 주관적이라 예측하기 어렵다는 문제점이 있음
+* 그래서 나이 예측을 회귀 문제로 다루면 model이 나이를 단일값으로 정확하게 예측하기 어려움
+* 하지만 이를 분류 문제로 간주하여 model에 buckets/age brackets를 정의하면 age detection model을 훈련하기 쉬우며 상당히 높은 정확도를 산출하므로 이를 사용해 프로젝트 진행
 
 <br>
 
