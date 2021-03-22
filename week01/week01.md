@@ -4,6 +4,6 @@
 
 ---
 
-### [01. Age Detection](https://github.com/hyunmin0317/OpenCV_Study/blob/master/week01/AgeDetection/Age_Detection.md)
+### [01. Age Detection](https://github.com/hyunmin0317/OpenCV_Study/blob/master/week01/AgeDetection/Github/Age_Detection.md)
 
 ### 02. 
