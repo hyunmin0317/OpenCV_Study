@@ -3,7 +3,7 @@
 
 ---
 
-### Week 00 (03/18) [pyimagesearch](https://www.pyimagesearch.com/)
+### [pyimagesearch](https://www.pyimagesearch.com/)
 
 ### Week 01 (03/26)
 
@@ -35,6 +35,6 @@
 
 |        Date         |          Homework           |         Content of Meeting         |
 | :-----------------: | :-------------------------: | :--------------------------------: |
-| 2021.03.19 (week00) |              X              | 앞으로의 스터디 계획과 목표를 정함 |
+| 2021.03.18 (week00) |              X              | 앞으로의 스터디 계획과 목표를 정함 |
 | 2021.03.26 (week01) | 관심있는 분야의 글 2개 공부 |                                    |
 
