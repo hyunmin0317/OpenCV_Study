@@ -29,52 +29,48 @@
 
 <br>
 
-### 02. What is age detection?
+### 02. Our age detector deep learning model
 
 <br>
 
-### 03. Our age detector deep learning model
+### 03. Why aren’t we treating age prediction as a regression problem?
 
 <br>
 
-### 04. Why aren’t we treating age prediction as a regression problem?
+### 04. Project structure
 
 <br>
 
-### 05. Project structure
+### 05. Implementing our OpenCV age detector for images
 
 <br>
 
-### 06. Implementing our OpenCV age detector for images
+### 06. OpenCV age detection results
 
 <br>
 
-### 07. OpenCV age detection results
+### 07. Implementing our OpenCV age detector for images
 
 <br>
 
-### 08. Implementing our OpenCV age detector for images
+### 08. Implementing our OpenCV age detector for real-time video streams
 
 <br>
 
-### 09. Implementing our OpenCV age detector for real-time video streams
+### 09. Real-time age detection with OpenCV results
 
 <br>
 
-### 10. Real-time age detection with OpenCV results
+### 10. How can I improve age prediction results?
 
 <br>
 
-### 11. How can I improve age prediction results?
+### 11. What about gender prediction?
 
 <br>
 
-### 12. What about gender prediction?
+### 12. Do you want to train your own deep learning models?
 
 <br>
 
-### 13. Do you want to train your own deep learning models?
-
-<br>
-
-### 14. Summary
+### 13. Summary
