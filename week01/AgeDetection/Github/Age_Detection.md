@@ -6,7 +6,7 @@
 
 ### 01. What is age detection?
 
-![image01]()
+![image01](https://github.com/hyunmin0317/OpenCV_Study/blob/master/week01/AgeDetection/Github/image01.PNG?raw=true)
 
 * Age detection: 얼굴 사진 만으로 사람의 나이를 자동으로 알아보는 과정
 
@@ -33,7 +33,7 @@
 
 ### 02. Our age detector deep learning model
 
-![image02]()
+![image02](https://github.com/hyunmin0317/OpenCV_Study/blob/master/week01/AgeDetection/Github/image02.PNG?raw=true)
 
 * The deep learning age detector model 
   * 2015년에 Levi와 Hassner가 구현한 model로 8가지 연령층을 학습하는 단순화된 AlexNet 구조를 사용
