@@ -1,6 +1,8 @@
-# [OpenCV Age Detection with Deep Learning]((https://www.pyimagesearch.com/2020/04/13/opencv-age-detection-with-deep-learning/))
+# OpenCV Age Detection with Deep Learning
 
-2021.03.22
+2021.03.22 
+
+[OpenCV Age Detection with Deep Learning](https://www.pyimagesearch.com/2020/04/13/opencv-age-detection-with-deep-learning/)
 
 <br>
 
@@ -52,9 +54,41 @@
 
 ### 04. Project structure
 
+* 프로젝트의 directory는 딥러닝 model인 age predictor와 face detector 그리고 이미지 파일들인 images로 구성됨
+* 여기서 다룰 2개의 Python scripts
+  * detect_age.py : Age prediction in single image
+  * detect_age_video.py : Age prediction in video streams
+* 각 scripts는 image/frame에서 얼굴을 감지한 후 OpenCV를 사용하여 연령 예측 수행
+
 <br>
 
 ### 05. Implementing our OpenCV age detector for images
+
+* static images에서 OpenCV를 사용한 연령 예측 구현
+
+  * detect_age.py
+
+    ```python
+    # import the necessary packages
+    import numpy as np
+    import argparse
+    import cv2
+    import os
+    
+    # construct the argument parse and parse the arguments
+    ap = argparse.ArgumentParser()
+    ap.add_argument("-i", "--image", required=True,
+    	help="path to input image")
+    ap.add_argument("-f", "--face", required=True,
+    	help="path to face detector model directory")
+    ap.add_argument("-a", "--age", required=True,
+    	help="path to age detector model directory")
+    ap.add_argument("-c", "--confidence", type=float, default=0.5,
+    	help="minimum probability to filter weak detections")
+    args = vars(ap.parse_args())
+    ```
+
+  * 프로젝트 시작을 위해 NumPy와 OpenCV를 import하고 모델 경로를 
 
 <br>
 
