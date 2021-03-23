@@ -64,31 +64,34 @@
 
 ### 05. Implementing our OpenCV age detector for images
 
-* static images에서 OpenCV를 사용한 연령 예측 구현
+* static images에서 OpenCV를 사용한 연령 예측 구현 (detect_age.py)
 
-  * detect_age.py
+  ```python
+  # import the necessary packages
+  import numpy as np
+  import argparse
+  import cv2
+  import os
+  
+  # construct the argument parse and parse the arguments
+  ap = argparse.ArgumentParser()
+  ap.add_argument("-i", "--image", required=True,
+  	help="path to input image")
+  ap.add_argument("-f", "--face", required=True,
+  	help="path to face detector model directory")
+  ap.add_argument("-a", "--age", required=True,
+  	help="path to age detector model directory")
+  ap.add_argument("-c", "--confidence", type=float, default=0.5,
+  	help="minimum probability to filter weak detections")
+  args = vars(ap.parse_args())
+  ```
 
-    ```python
-    # import the necessary packages
-    import numpy as np
-    import argparse
-    import cv2
-    import os
-    
-    # construct the argument parse and parse the arguments
-    ap = argparse.ArgumentParser()
-    ap.add_argument("-i", "--image", required=True,
-    	help="path to input image")
-    ap.add_argument("-f", "--face", required=True,
-    	help="path to face detector model directory")
-    ap.add_argument("-a", "--age", required=True,
-    	help="path to age detector model directory")
-    ap.add_argument("-c", "--confidence", type=float, default=0.5,
-    	help="minimum probability to filter weak detections")
-    args = vars(ap.parse_args())
-    ```
-
-  * 프로젝트 시작을 위해 NumPy와 OpenCV를 import하고 모델 경로를 
+  * 프로젝트 시작을 위해 NumPy와 OpenCV를 import 하고 모델 경로를 기입하기 위해 파이썬의 built-in module인 os를 import 하며 command line 명령을 위해 argparse를 import 함
+  * command line arguments
+    * --image : age detection 
+    * --face : The path to our pre-trained face detector model directory
+    * --age : Our pre-trained age detector model directory
+    * --confidence : The minimum probability threshold in order to filter weak detections
 
 <br>
 
