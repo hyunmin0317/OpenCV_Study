@@ -66,61 +66,376 @@
 
 * static images에서 OpenCV를 사용한 연령 예측 구현 (detect_age.py)
 
-  ```python
-  # import the necessary packages
-  import numpy as np
-  import argparse
-  import cv2
-  import os
-  
-  # construct the argument parse and parse the arguments
-  ap = argparse.ArgumentParser()
-  ap.add_argument("-i", "--image", required=True,
-  	help="path to input image")
-  ap.add_argument("-f", "--face", required=True,
-  	help="path to face detector model directory")
-  ap.add_argument("-a", "--age", required=True,
-  	help="path to age detector model directory")
-  ap.add_argument("-c", "--confidence", type=float, default=0.5,
-  	help="minimum probability to filter weak detections")
-  args = vars(ap.parse_args())
-  ```
+  * import와 command line arguments
 
-  * 프로젝트 시작을 위해 NumPy와 OpenCV를 import 하고 모델 경로를 기입하기 위해 파이썬의 built-in module인 os를 import 하며 command line 명령을 위해 argparse를 import 함
-  * command line arguments
-    * --image : age detection 
-    * --face : The path to our pre-trained face detector model directory
-    * --age : Our pre-trained age detector model directory
-    * --confidence : The minimum probability threshold in order to filter weak detections
+    ```python
+    # import the necessary packages
+    import numpy as np
+    import argparse
+    import cv2
+    import os
+    
+    # construct the argument parse and parse the arguments
+    ap = argparse.ArgumentParser()
+    ap.add_argument("-i", "--image", required=True,
+    	help="path to input image")
+    ap.add_argument("-f", "--face", required=True,
+    	help="path to face detector model directory")
+    ap.add_argument("-a", "--age", required=True,
+    	help="path to age detector model directory")
+    ap.add_argument("-c", "--confidence", type=float, default=0.5,
+    	help="minimum probability to filter weak detections")
+    args = vars(ap.parse_args())
+    ```
+    * 프로젝트 시작을 위해 NumPy와 OpenCV를 import 하고 모델 경로를 기입하기 위해 파이썬의 built-in module인 os를 import 하며 command line 명령을 위해 argparse를 import 함
+    * command line arguments
+      * --image : age detection을 위한 input image의 경로 제공
+      * --face : 사전에 훈련된 face detection model directory 경로
+      * --age : 사전에 훈련된 age detection model directory
+      * --confidence : weak detections을 필터링하기 위한 최소 확률 임계 값
+
+  <br>
+
+  * age detection이 예측할 연령 bucket 목록을 정의
+
+    ```python
+    # define the list of age buckets our age detector will predict
+    AGE_BUCKETS = ["(0-2)", "(4-6)", "(8-12)", "(15-20)", "(25-32)",
+    	"(38-43)", "(48-53)", "(60-100)"]
+    ```
+
+    <br>
+
+  * 사전에 학습된 2가지 model을(age detection, face detection) 로드
+
+    ```python
+    # load our serialized face detector model from disk
+    print("[INFO] loading face detector model...")
+    prototxtPath = os.path.sep.join([args["face"], "deploy.prototxt"])
+    weightsPath = os.path.sep.join([args["face"],
+    	"res10_300x300_ssd_iter_140000.caffemodel"])
+    faceNet = cv2.dnn.readNet(prototxtPath, weightsPath)
+    
+    # load our serialized age detector model from disk
+    print("[INFO] loading age detector model...")
+    prototxtPath = os.path.sep.join([args["age"], "age_deploy.prototxt"])
+    weightsPath = os.path.sep.join([args["age"], "age_net.caffemodel"])
+    ageNet = cv2.dnn.readNet(prototxtPath, weightsPath)
+    ```
+
+    * face detector은 image에서 얼굴을 찾고 age detector는 찾은 얼굴이 속한 연령 범위 결정
+
+  <br>
+
+  * 디스크에서 image를 로드하고 얼굴 ROI를 감지
+
+    ```python
+    # load the input image and construct an input blob for the image
+    image = cv2.imread(args["image"])
+    (h, w) = image.shape[:2]
+    blob = cv2.dnn.blobFromImage(image, 1.0, (300, 300),
+    	(104.0, 177.0, 123.0))
+    
+    # pass the blob through the network and obtain the face detections
+    print("[INFO] computing face detections...")
+    faceNet.setInput(blob)
+    detections = faceNet.forward()
+    ```
+
+    * --image에 의해 로드되며 OpenCV의 blobFromImage에 의해 image에서 얼굴을 감지하고 결과를 detections의 리스트로 blob에 저장
+
+  <br>
+
+  * 얼굴 ROI detections를 반복
+
+    ```python
+    # loop over the detections
+    for i in range(0, detections.shape[2]):
+    	# extract the confidence (i.e., probability) associated with the
+    	# prediction
+    	confidence = detections[0, 0, i, 2]
+        
+    	# filter out weak detections by ensuring the confidence is
+    	# greater than the minimum confidence
+    	if confidence > args["confidence"]:
+    		# compute the (x, y)-coordinates of the bounding box for the
+    		# object
+    		box = detections[0, 0, i, 3:7] * np.array([w, h, w, h])
+    		(startX, startY, endX, endY) = box.astype("int")
+    
+            # extract the ROI of the face and then construct a blob from
+    		# *only* the face ROI
+    		face = image[startY:endY, startX:endX]
+    		faceBlob = cv2.dnn.blobFromImage(face, 1.0, (227, 227),
+    			(78.4263377603, 87.7689143
+    ```
+
+    * detections을 반복하며 bucket에 대한 확률을 confidence에 저장하며 최소 기준을 충족하는 얼굴의 경우 ROI 좌표를 추출
+    * 계속해서 ROI를 반복하며 얼굴만 포함된 image인 blob을 만듦
+
+  <br>
+
+  * age detection 수행
+
+    ```python
+    		# make predictions on the age and find the age bucket with
+    		# the largest corresponding probability
+    		ageNet.setInput(faceBlob)
+    		preds = ageNet.forward()
+    		i = preds[0].argmax()
+    		age = AGE_BUCKETS[i]
+    		ageConfidence = preds[0][i]
+            
+    		# display the predicted age to our terminal
+    		text = "{}: {:.2f}%".format(age, ageConfidence * 100)
+    		print("[INFO] {}".format(text))
+    		
+            # draw the bounding box of the face along with the associated
+    		# predicted age
+    		y = startY - 10 if startY - 10 > 10 else startY + 10
+    		cv2.rectangle(image, (startX, startY), (endX, endY),
+    			(0, 0, 255), 2)
+    		cv2.putText(image, text, (startX, y),
+    			cv2.FONT_HERSHEY_SIMPLEX, 0.45, (0, 0, 255), 2)
+            
+    # display the output image
+    cv2.imshow("Image", image)
+    cv2.waitKey(0)
+    ```
+
+    * 얼굴만 포함된 image인 blob을 사용하여 연령 버킷을 만들고 가장 확률이 높은 연령 버킷을 찾아 연령 예측
+    * 얼굴만 포함된 image인 blob을 사용하여 연령 예측 (age bucket과 ageConfidence)
+    * 얼굴 ROI의 좌표와 입력 데이터를 통해 예상 연령을 터미널에 표시하고 얼굴의 bounding box와 예상 연령의 이미지를 출력
 
 <br>
 
 ### 06. OpenCV age detection results
 
-<br>
-
-### 07. Implementing our OpenCV age detector for images
+![image03](https://github.com/hyunmin0317/OpenCV_Study/blob/master/week01/AgeDetection/Github/image03.PNG?raw=true)
 
 <br>
 
-### 08. Implementing our OpenCV age detector for real-time video streams
+### 07. Implementing our OpenCV age detector for real-time video streams
+
+* video script는 image script와 매우 비슷하며 video script를 설정하고 모든 프레임에서 age detection을 수행해야 한다는 점이 다름
+
+* video에서 OpenCV를 사용한 연령 예측 구현 (detect_age_video.py)
+
+  * 필요한 패키지 import
+
+    ```python
+    # import the necessary packages
+    from imutils.video import VideoStream
+    import numpy as np
+    import argparse
+    import imutils
+    import time
+    import cv2
+    import os
+    ```
+
+    *  webcam을 설정하고 사용하여 video stream 만들기 위해 VideoStream, imutils, time를 import
+
+  <br>
+
+  * detect_and_predict_age 함수
+
+    ```python
+    def detect_and_predict_age(frame, faceNet, ageNet, minConf=0.5):
+    	# define the list of age buckets our age detector will predict
+    	AGE_BUCKETS = ["(0-2)", "(4-6)", "(8-12)", "(15-20)", "(25-32)",
+    		"(38-43)", "(48-53)", "(60-100)"]
+        
+    	# initialize our results list
+    	results = []
+    	
+        # grab the dimensions of the frame and then construct a blob
+    	# from it
+    	(h, w) = frame.shape[:2]
+    	blob = cv2.dnn.blobFromImage(frame, 1.0, (300, 300),
+    		(104.0, 177.0, 123.0))
+    	
+        # pass the blob through the network and obtain the face detections
+    	faceNet.setInput(blob)
+    	detections = faceNet.forward()
+    ```
+
+    * frame: webcam video stream의 단일 프레임
+    * faceNet: 딥러닝 face detector model
+    * ageNet: 딥러닝 age classifier model
+    * minConf: weak face detections을 필터링하는 임계 값
+
+  <br>
+
+  * 얼굴을 detection하는 과정
+
+    ```python
+    	# loop over the detections
+    	for i in range(0, detections.shape[2]):
+    		# extract the confidence (i.e., probability) associated with
+    		# the prediction
+    		confidence = detections[0, 0, i, 2]
+            
+    		# filter out weak detections by ensuring the confidence is
+    		# greater than the minimum confidence
+    		if confidence > minConf:
+    			# compute the (x, y)-coordinates of the bounding box for
+    			# the object
+    			box = detections[0, 0, i, 3:7] * np.array([w, h, w, h])
+    			(startX, startY, endX, endY) = box.astype("int")
+    			
+                # extract the ROI of the face
+    			face = frame[startY:endY, startX:endX]
+    			
+                # ensure the face ROI is sufficiently large
+    			if face.shape[0] < 20 or face.shape[1] < 20:
+    				continue
+    ```
+
+    * detection을 반복하여 각 bucket에 대한 확률을 구하고 확률이 가장 높은 bucket을 찾음
+    * 잘못된 인식과 카메라에서 멀리 떨어져있는 경우를 방지하기 위해 스트림에서 얼굴 ROI가 충분히 큰지 확인
+
+  <br>
+
+  * age detection 결과를 표시
+
+    ```python
+    			# construct a blob from *just* the face ROI
+    			faceBlob = cv2.dnn.blobFromImage(face, 1.0, (227, 227),
+    				(78.4263377603, 87.7689143744, 114.895847746),
+    				swapRB=False)
+            
+    			# make predictions on the age and find the age bucket with
+    			# the largest corresponding probability
+    			ageNet.setInput(faceBlob)
+    			preds = ageNet.forward()
+    			i = preds[0].argmax()
+    			age = AGE_BUCKETS[i]
+    			ageConfidence = preds[0][i]
+    			
+                # construct a dictionary consisting of both the face
+    			# bounding box location along with the age prediction,
+    			# then update our results list
+    			d = {
+    				"loc": (startX, startY, endX, endY),
+    				"age": (age, ageConfidence)
+    			}
+    			results.append(d)
+                
+    	# return our results to the calling function
+    	return results
+    ```
+
+    * 확률이 가장 높은 bucket을 통해 연령 예측 (age bucket과 ageConfidence)
+    * dictionary를 통해 파악한 얼굴의 위치와 예상 연령을 정렬한 뒤 results에 저장하고 결과를 return
+
+  <br>
+
+  * command line arguments 정의
+
+    ```python
+    # construct the argument parse and parse the arguments
+    ap = argparse.ArgumentParser()
+    ap.add_argument("-f", "--face", required=True,
+    	help="path to face detector model directory")
+    ap.add_argument("-a", "--age", required=True,
+    	help="path to age detector model directory")
+    ap.add_argument("-c", "--confidence", type=float, default=0.5,
+    	help="minimum probability to filter weak detections")
+    args = vars(ap.parse_args())
+    ```
+
+    * --face: 사전에 훈련된 face detector model directory 경로
+    * --age: 사전에 훈련된 age detector model directory
+    * --confidence: weak detections을 필터링하기 위한 확률의 최소 임계 값
+
+  <br>
+
+  * 모델을 로드한 뒤 비디오 스트림 초기화
+
+    ```python
+    # load our serialized face detector model from disk
+    print("[INFO] loading face detector model...")
+    prototxtPath = os.path.sep.join([args["face"], "deploy.prototxt"])
+    weightsPath = os.path.sep.join([args["face"],
+    	"res10_300x300_ssd_iter_140000.caffemodel"])
+    faceNet = cv2.dnn.readNet(prototxtPath, weightsPath)
+    
+    # load our serialized age detector model from disk
+    print("[INFO] loading age detector model...")
+    prototxtPath = os.path.sep.join([args["age"], "age_deploy.prototxt"])
+    weightsPath = os.path.sep.join([args["age"], "age_net.caffemodel"])
+    ageNet = cv2.dnn.readNet(prototxtPath, weightsPath)
+    
+    # initialize the video stream and allow the camera sensor to warm up
+    print("[INFO] starting video stream...")
+    vs = VideoStream(src=0).start()
+    time.sleep(2.0)
+    ```
+
+    * face detector을 로드한 뒤 초기화하고 age detector을 로드
+    * VideoStream 클래스를 통해 webcam 초기화
+
+  <br>
+
+  * webcam이 준비되면 프레임 처리 시작
+
+    ```python
+    # loop over the frames from the video stream
+    while True:
+    	# grab the frame from the threaded video stream and resize it
+    	# to have a maximum width of 400 pixels
+    	frame = vs.read()
+    	frame = imutils.resize(frame, width=400)
+        
+    	# detect faces in the frame, and for each face in the frame,
+    	# predict the age
+    	results = detect_and_predict_age(frame, faceNet, ageNet,
+    		minConf=args["confidence"])
+    	
+        # loop over the results
+    	for r in results:
+    		# draw the bounding box of the face along with the associated
+    		# predicted age
+    		text = "{}: {:.2f}%".format(r["age"][0], r["age"][1] * 100)
+    		(startX, startY, endX, endY) = r["loc"]
+    		y = startY - 10 if startY - 10 > 10 else startY + 10
+    		cv2.rectangle(frame, (startX, startY), (endX, endY),
+    			(0, 0, 255), 2)
+    		cv2.putText(frame, text, (startX, y),
+    			cv2.FONT_HERSHEY_SIMPLEX, 0.45, (0, 0, 255), 2)
+    	
+        # show the output frame
+    	cv2.imshow("Frame", frame)
+    	key = cv2.waitKey(1) & 0xFF
+    	
+        # if the `q` key was pressed, break from the loop
+    	if key == ord("q"):
+    		break
+            
+    # do a bit of cleanup
+    cv2.destroyAllWindows()
+    vs.stop()
+    ```
+
+    * frame의 크기를 조정하고 detect_and_predict_age를 통해 얼굴을 감지하고 나이를 예측
+    * 얼굴의 bounding box를 그리고 예상 연령을 보여주며 q 키를 누를 때까지 반복 
 
 <br>
 
-### 09. Real-time age detection with OpenCV results
+### 08. Real-time age detection with OpenCV results
+
+![image04](https://github.com/hyunmin0317/OpenCV_Study/blob/master/week01/AgeDetection/Github/image04.PNG?raw=true)
 
 <br>
 
 ### 10. How can I improve age prediction results?
 
-<br>
+![image05](https://github.com/hyunmin0317/OpenCV_Study/blob/master/week01/AgeDetection/Github/image05.PNG?raw=true)
 
-### 11. What about gender prediction?
-
-<br>
-
-### 12. Do you want to train your own deep learning models?
-
-<br>
-
-### 13. Summary
+* Levi 및 Hassner 딥 러닝 연령 감지 모델은  25 ~ 32세 범위로 크게 편향되어 있다는 문제점이 있음
+* 모델의 편향을 해결하는 방법
+  1. 다른 연령대에 대한 추가 훈련 데이터를 수집하여 데이터 세트의 균형을 맞춤
+  2. 클래스 불균형을 처리하기 위해 클래스 가중치 적용
+  3. 데이터량 증대
+  4. 모델 학습시 추가 정규화 구현
