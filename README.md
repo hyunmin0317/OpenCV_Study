@@ -5,13 +5,9 @@
 
 ### [pyimagesearch](https://www.pyimagesearch.com/)
 
-### [Week 01 (03/26)](https://github.com/hyunmin0317/OpenCV_Study/blob/master/week01/week01.md)
+### [Age Detection](https://github.com/hyunmin0317/OpenCV_Study/blob/master/AgeDetection/Github/Age_Detection.md) `(Week01 03/26)`
 
-### [Week 02 (04/02)](https://github.com/hyunmin0317/OpenCV_Study/blob/master/week02/week02.md)
-
-### [Week 03 (04/09)](https://github.com/hyunmin0317/OpenCV_Study/blob/master/week03/week03.md)
-
-### [Week 04 (04/16)](https://github.com/hyunmin0317/OpenCV_Study/blob/master/week04/week04.md)
+### [Age Gender Detection](https://github.com/hyunmin0317/OpenCV_Study/blob/master/AgeGenderDetector/Github/Age_Gender_Detection.md) `(Week02 04/02)`
 
 <br>
 
