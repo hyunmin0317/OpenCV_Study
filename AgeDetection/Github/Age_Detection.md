@@ -8,7 +8,7 @@
 
 ### 01. What is age detection?
 
-![image01](https://github.com/hyunmin0317/OpenCV_Study/blob/master/week01/AgeDetection/Github/image01.PNG?raw=true)
+![image01](https://github.com/hyunmin0317/OpenCV_Study/blob/master/AgeDetection/Github/image01.PNG?raw=true)
 
 * Age detection: 얼굴 사진 만으로 사람의 나이를 자동으로 알아보는 과정
 
@@ -35,7 +35,7 @@
 
 ### 02. Our age detector deep learning model
 
-![image02](https://github.com/hyunmin0317/OpenCV_Study/blob/master/week01/AgeDetection/Github/image02.PNG?raw=true)
+![image02](https://github.com/hyunmin0317/OpenCV_Study/blob/master/AgeDetection/Github/image02.PNG?raw=true)
 
 * The deep learning age detector model 
   * 2015년에 Levi와 Hassner가 구현한 model로 8가지 연령층을 학습하는 단순화된 AlexNet 구조를 사용
@@ -211,7 +211,7 @@
 
 ### 06. OpenCV age detection results
 
-![image03](https://github.com/hyunmin0317/OpenCV_Study/blob/master/week01/AgeDetection/Github/image03.PNG?raw=true)
+![image03](https://github.com/hyunmin0317/OpenCV_Study/blob/master/AgeDetection/Github/image03.PNG?raw=true)
 
 <br>
 
@@ -425,13 +425,13 @@
 
 ### 08. Real-time age detection with OpenCV results
 
-![image04](https://github.com/hyunmin0317/OpenCV_Study/blob/master/week01/AgeDetection/Github/image04.PNG?raw=true)
+![image04](https://github.com/hyunmin0317/OpenCV_Study/blob/master/AgeDetection/Github/image04.PNG?raw=true)
 
 <br>
 
 ### 10. How can I improve age prediction results?
 
-![image05](https://github.com/hyunmin0317/OpenCV_Study/blob/master/week01/AgeDetection/Github/image05.PNG?raw=true)
+![image05](https://github.com/hyunmin0317/OpenCV_Study/blob/master/AgeDetection/Github/image05.PNG?raw=true)
 
 * Levi 및 Hassner 딥 러닝 연령 감지 모델은  25 ~ 32세 범위로 크게 편향되어 있다는 문제점이 있음
 * 모델의 편향을 해결하는 방법
