@@ -10,14 +10,14 @@
 
 ### OpenCV age gender detection results
 
-1. 6살 사진 (2004년) - Female: 66.31%, (8~12): 90.21%
+1. 6살 사진 (2004년) - Male: 65.11%, (8~12): 91.52%
 
-   ![result1](https://github.com/hyunmin0317/OpenCV_Study/blob/master/AgeGenderDetector/Github/result1.jpg?raw=true)
+   ![result01](https://github.com/hyunmin0317/OpenCV_Study/blob/master/AgeGenderDetector/Github/result01.jpg?raw=true)
 
 2. 23살 사진 (2021년 1월) - Male: 99.65%, (8~12): 88.71%
 
-   ![result2](https://github.com/hyunmin0317/OpenCV_Study/blob/master/AgeGenderDetector/Github/result2.jpg?raw=true)
+   ![result02](https://github.com/hyunmin0317/OpenCV_Study/blob/master/AgeGenderDetector/Github/result02.jpg?raw=true)
 
 3. 23살 사진 (2021년 3월) - Male: 80.30%, (8~12): 47.52%
 
-   ![result3](https://github.com/hyunmin0317/OpenCV_Study/blob/master/AgeGenderDetector/Github/result3.jpg?raw=true)
+   ![result03](https://github.com/hyunmin0317/OpenCV_Study/blob/master/AgeGenderDetector/Github/result03.jpg?raw=true)
