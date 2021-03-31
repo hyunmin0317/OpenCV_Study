@@ -18,6 +18,6 @@
 
    ![result02](https://github.com/hyunmin0317/OpenCV_Study/blob/master/AgeGenderDetector/Github/result02.jpg?raw=true)
 
-3. 23살 사진 (2021년 3월) - Male: 80.30%, (8~12): 47.52%
+3. 23살 사진 (2021년 3월) - Male: 80.30%, (15~20): 47.52%
 
    ![result03](https://github.com/hyunmin0317/OpenCV_Study/blob/master/AgeGenderDetector/Github/result03.jpg?raw=true)
