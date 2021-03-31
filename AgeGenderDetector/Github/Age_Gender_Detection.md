@@ -12,7 +12,7 @@
 
 1. 6살 사진 (2004년) - Female: 66.31%, (8~12): 90.21%
 
-   
+   ![result1](https://github.com/hyunmin0317/OpenCV_Study/blob/master/AgeGenderDetector/Github/result1.jpg?raw=true)
 
 2. 23살 사진 (2021년 1월) - Male: 99.65%, (8~12): 88.71%
 
