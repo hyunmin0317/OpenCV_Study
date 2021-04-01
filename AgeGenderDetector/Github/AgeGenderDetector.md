@@ -4,7 +4,7 @@
 
 [OpenCV Age Detection with Deep Learning](https://www.pyimagesearch.com/2020/04/13/opencv-age-detection-with-deep-learning/)
 
-* Run `python detect.py --image images/[your_image_name] --face face_detector --age age_detector --gender gender_detector --confidence [confidence(0-1)]`
+* Run `python detect.py --image images/[your_image_name] --face face_detector --age age_detector --gender gender_detector`
 
 <br>
 
