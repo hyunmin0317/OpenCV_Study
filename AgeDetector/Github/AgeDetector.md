@@ -8,7 +8,7 @@
 
 ### 01. What is age detection?
 
-![image01](https://github.com/hyunmin0317/OpenCV_Study/blob/master/AgeDetection/Github/image01.PNG?raw=true)
+![image01]()
 
 * Age detection: 얼굴 사진 만으로 사람의 나이를 자동으로 알아보는 과정
 
@@ -35,7 +35,7 @@
 
 ### 02. Our age detector deep learning model
 
-![image02](https://github.com/hyunmin0317/OpenCV_Study/blob/master/AgeDetection/Github/image02.PNG?raw=true)
+![image02]()
 
 * The deep learning age detector model 
   * 2015년에 Levi와 Hassner가 구현한 model로 8가지 연령층을 학습하는 단순화된 AlexNet 구조를 사용
@@ -211,14 +211,16 @@
 
 ### 06. OpenCV age detection results
 
+* Run `python detect_age.py --image images/[your_image_name] --face face_detector --age age_detector`
+
 1. 6살 사진 (2004년) - (8~12): 97.75%
 
-   ![result01](https://github.com/hyunmin0317/OpenCV_Study/blob/master/AgeDetector/Github/result01.jpg?raw=true)
+   ![result01]()
 
 2. 23살 사진 (2021년) - (8~12): 88.71%
 
-   ![result02](https://github.com/hyunmin0317/OpenCV_Study/blob/master/AgeDetector/Github/result02.jpg?raw=true)
+   ![result02]()
 
 3. 23살 사진 (2021년) - (15~20): 47.52%
 
-   ![result03](https://github.com/hyunmin0317/OpenCV_Study/blob/master/AgeDetector/Github/result03.jpg?raw=true)
+   ![result03]()
