@@ -10,5 +10,5 @@
 
 ###  Real-time age gender detection with OpenCV results
 
-![result01.PNG]
+![result01.PNG](https://github.com/hyunmin0317/OpenCV_Study/blob/master/AgeGenderDetector(Video)/Github/result01.PNG?raw=true)
 
