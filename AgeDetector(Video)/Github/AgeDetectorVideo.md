@@ -218,13 +218,13 @@
 
 * Run `python detect_age_video.py --face face_detector --age age_detector`
 
-![result01]()
+<img src="https://github.com/hyunmin0317/OpenCV_Study/blob/master/AgeDetector(Video)/Github/result01.PNG?raw=true" alt="result01" style="zoom:67%;" />
 
 <br>
 
 ### 03. How can I improve age prediction results?
 
-![image01]()
+<img src="https://github.com/hyunmin0317/OpenCV_Study/blob/master/AgeDetector(Video)/Github/image01.PNG?raw=true" alt="image01" style="zoom:67%;" />
 
 * Levi 및 Hassner 딥 러닝 연령 감지 모델은  25 ~ 32세 범위로 크게 편향되어 있다는 문제점이 있음
 * 모델의 편향을 해결하는 방법
