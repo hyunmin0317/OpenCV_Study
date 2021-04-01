@@ -6,13 +6,13 @@
 * ### [pyimagesearch](https://www.pyimagesearch.com/)
 
 * ### Week01 (03/26)
-  * ### [Age Detector]
+  * ### [Age Detector](https://github.com/hyunmin0317/OpenCV_Study/blob/master/AgeDetector/Github/AgeDetector.md)
 
-  * ### [Age Detector Video]
+  * ### [Age Detector Video](https://github.com/hyunmin0317/OpenCV_Study/blob/master/AgeDetector(Video)/Github/AgeDetectorVideo.md)
 
 * ### Week02 (04/02)
 
-  * ### [Age Gender Detector]
+  * ### [Age Gender Detector](https://github.com/hyunmin0317/OpenCV_Study/blob/master/AgeGenderDetector/Github/AgeGenderDetector.md)
 
 
 
