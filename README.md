@@ -24,7 +24,7 @@
   
   * ### [Age Gender Detector (Video)](https://github.com/hyunmin0317/OpenCV_Study/blob/master/AgeGenderDetector/AgeGenderDetector(Video)/Github/AgeGenderDetector_Video.md)
   
-* ### Week03 (04/09)
+* ### Week03 (04/11)
 
   * ### [MediaPipe Pose (Image)](https://github.com/hyunmin0317/OpenCV_Study/blob/master/MediaPipePose/MediaPipePose(Image)/Github/MediaPipePose_Image.md)
 
