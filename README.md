@@ -26,6 +26,10 @@
   
 * ### Week03 (04/09)
 
+  * ### [MediaPipe Pose (Image)](https://github.com/hyunmin0317/OpenCV_Study/blob/master/MediaPipePose/MediaPipePose(Image)/Github/MediaPipePose_Image.md)
+
+  * ### [MediaPipe Pose (Video)](https://github.com/hyunmin0317/OpenCV_Study/blob/master/MediaPipePose/MediaPipePose(Video)/Github/MediaPipePose_Video.md)
+
 <br>
 
 ## :computer: 팀원
