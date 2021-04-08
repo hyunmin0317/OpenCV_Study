@@ -3,31 +3,37 @@
 
 ---
 
+## :globe_with_meridians: Homepage
+
 * ### [pyimagesearch](https://www.pyimagesearch.com/)
 
-* ### Week01 (03/26)
-  * ### [Age Detector](https://github.com/hyunmin0317/OpenCV_Study/blob/master/AgeDetector/Github/AgeDetector.md)
+* ### [MediaPipe](https://google.github.io/mediapipe/)
 
-  * ### [Age Detector (Video)](https://github.com/hyunmin0317/OpenCV_Study/blob/master/AgeDetector(Video)/Github/AgeDetectorVideo.md)
+<br>
+
+## :book: Study
+
+* ### Week01 (03/26)
+  * ### [Age Detector (Image)](https://github.com/hyunmin0317/OpenCV_Study/blob/master/AgeDetector/AgeDetector(Image)/Github/AgeDetector_Image.md)
+
+  * ### [Age Detector (Video)](https://github.com/hyunmin0317/OpenCV_Study/blob/master/AgeDetector/AgeDetector(Video)/Github/AgeDetector_Video.md)
 
 * ### Week02 (04/02)
 
-  * ### [Age Gender Detector](https://github.com/hyunmin0317/OpenCV_Study/blob/master/AgeGenderDetector/Github/AgeGenderDetector.md)
+  * ### [Age Gender Detector (Image)](https://github.com/hyunmin0317/OpenCV_Study/blob/master/AgeGenderDetector/AgeGenderDetector(Image)/Github/AgeGenderDetector_Image.md)
   
-  * ### [Age Gender Detector (Video)](https://github.com/hyunmin0317/OpenCV_Study/blob/master/AgeGenderDetector(Video)/Github/AgeGenderDetectorVideo.md)
+  * ### [Age Gender Detector (Video)](https://github.com/hyunmin0317/OpenCV_Study/blob/master/AgeGenderDetector/AgeGenderDetector(Video)/Github/AgeGenderDetector_Video.md)
   
 * ### Week03 (04/09)
 
 <br>
 
-### 팀원
+## :computer: 팀원
 
----
-
-> [최현민 (hyunmin0317)](https://github.com/hyunmin0317?tab=repositories)
+> **최현민 [(hyunmin0317)](https://github.com/hyunmin0317?tab=repositories)**
 >
-> [임혜지(hyeji1221)](https://github.com/hyeji1221)
+> **임혜지 [(hyeji1221)](https://github.com/hyeji1221)**
 >
-> [배은기 (BaeEunGi)](https://github.com/BaeEunGi)
+> **배은기 [(BaeEunGi)](https://github.com/BaeEunGi)**
 >
-> [안선정 (sunjungAn)](https://github.com/sunjungAn)
+> **안선정 [(sunjungAn)](https://github.com/sunjungAn)**
