@@ -12,12 +12,12 @@
 
 1. 6살 사진 (2004년) - Male: 65.11%, (8~12): 91.52%
 
-   ![result01](https://github.com/hyunmin0317/OpenCV_Study/blob/master/AgeGenderDetector/Github/result01.jpg?raw=true)
+   ![result01](https://github.com/hyunmin0317/OpenCV_Study/blob/master/AgeGenderDetector/AgeGenderDetector(Image)/Github/result01.jpg?raw=true)
 
 2. 23살 사진 (2021년 1월) - Male: 99.65%, (8~12): 88.71%
 
-   <img src="https://github.com/hyunmin0317/OpenCV_Study/blob/master/AgeGenderDetector/Github/result02.jpg?raw=true" alt="result02" style="zoom:67%;" />
+   <img src="https://github.com/hyunmin0317/OpenCV_Study/blob/master/AgeGenderDetector/AgeGenderDetector(Image)/Github/result02.jpg?raw=true" alt="result02" style="zoom:67%;" />
 
 3. 23살 사진 (2021년 3월) - Male: 80.30%, (15~20): 47.52%
 
-   <img src="https://github.com/hyunmin0317/OpenCV_Study/blob/master/AgeGenderDetector/Github/result03.jpg?raw=true" alt="result03" style="zoom: 67%;" />
+   <img src="https://github.com/hyunmin0317/OpenCV_Study/blob/master/AgeGenderDetector/AgeGenderDetector(Image)/Github/result03.jpg?raw=true" alt="result03" style="zoom: 67%;" />
