@@ -47,15 +47,15 @@ cv2.imshow("MediaPipe Holistic", annotated_image)
 
 1. image0.jpg & result0.jpg
 
-   ![result0.jpg](https://github.com/hyunmin0317/OpenCV_Study/blob/master/MediaPipePose/MediaPipeHolistic(Image)/Github/result0.jpg?raw=true)
+   ![result0.jpg](https://github.com/hyunmin0317/OpenCV_Study/blob/master/MediaPipeHolistic/MediaPipeHolistic(Image)/Github/result0.jpg?raw=true)
 
 2. image1.jpg & result1.jpg
 
-   ![result1.jpg](https://github.com/hyunmin0317/OpenCV_Study/blob/master/MediaPipePose/MediaPipeHolistic(Image)/Github/result1.jpg?raw=true)
+   ![result1.jpg](https://github.com/hyunmin0317/OpenCV_Study/blob/master/MediaPipeHolistic/MediaPipeHolistic(Image)/Github/result1.jpg?raw=true)
 
 3. image2.jpg & result2.jpg
 
-   ![result2.jpg](https://github.com/hyunmin0317/OpenCV_Study/blob/master/MediaPipePose/MediaPipeHolistic(Image)/Github/result2.jpg?raw=true)
+   ![result2.jpg](https://github.com/hyunmin0317/OpenCV_Study/blob/master/MediaPipeHolistic/MediaPipeHolistic(Image)/Github/result2.jpg?raw=true)
 
 
 

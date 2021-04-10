@@ -53,5 +53,5 @@ cap.release()
 
 ###  02. MediaPipe Holistic Video Result
 
-![result.PNG](https://github.com/hyunmin0317/OpenCV_Study/blob/master/MediaPipePose/MediaPipeHolistic(Video)/Github/result.PNG?raw=true)
+![result.PNG](https://github.com/hyunmin0317/OpenCV_Study/blob/master/MediaPipeHolistic/MediaPipeHolistic(Video)/Github/result.PNG?raw=true)
 
