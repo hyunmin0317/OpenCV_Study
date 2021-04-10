@@ -1,6 +1,6 @@
 # Age Gender Detector with Deep Learning & OpenCV
 
-### Week01 - 2021.03.22
+### Week02 - 2021.04.02
 
 ---
 
