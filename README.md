@@ -24,6 +24,8 @@
 * ### Week03 (04/11)
 
   * ### [MediaPipe Pose](https://github.com/hyunmin0317/OpenCV_Study/blob/master/MediaPipePose/MediaPipePose.md)
+  
+  * ### [MediaPipe Holistic](https://github.com/hyunmin0317/OpenCV_Study/blob/master/MediaPipeHolistic/MediaPipeHolistic.md)
 
 <br>
 
