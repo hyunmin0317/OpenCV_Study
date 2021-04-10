@@ -14,21 +14,16 @@
 ## :book: Study
 
 * ### Week01 (03/26)
-  * ### [Age Detector (Image)](https://github.com/hyunmin0317/OpenCV_Study/blob/master/AgeDetector/AgeDetector(Image)/Github/AgeDetector_Image.md)
 
-  * ### [Age Detector (Video)](https://github.com/hyunmin0317/OpenCV_Study/blob/master/AgeDetector/AgeDetector(Video)/Github/AgeDetector_Video.md)
+  * ### [Age Detector](https://github.com/hyunmin0317/OpenCV_Study/blob/master/AgeDetector/AgeDetector.md)
 
 * ### Week02 (04/02)
 
-  * ### [Age Gender Detector (Image)](https://github.com/hyunmin0317/OpenCV_Study/blob/master/AgeGenderDetector/AgeGenderDetector(Image)/Github/AgeGenderDetector_Image.md)
-  
-  * ### [Age Gender Detector (Video)](https://github.com/hyunmin0317/OpenCV_Study/blob/master/AgeGenderDetector/AgeGenderDetector(Video)/Github/AgeGenderDetector_Video.md)
-  
+  * ### [Age Gender Detector](https://github.com/hyunmin0317/OpenCV_Study/blob/master/AgeGenderDetector/AgeGenderDetector.md)
+
 * ### Week03 (04/11)
 
-  * ### [MediaPipe Pose (Image)](https://github.com/hyunmin0317/OpenCV_Study/blob/master/MediaPipePose/MediaPipePose(Image)/Github/MediaPipePose_Image.md)
-
-  * ### [MediaPipe Pose (Video)](https://github.com/hyunmin0317/OpenCV_Study/blob/master/MediaPipePose/MediaPipePose(Video)/Github/MediaPipePose_Video.md)
+  * ### [MediaPipe Pose](https://github.com/hyunmin0317/OpenCV_Study/blob/master/MediaPipePose/MediaPipePose.md)
 
 <br>
 
