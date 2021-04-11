@@ -4,7 +4,13 @@
 
 [MediaPipe Pose](https://google.github.io/mediapipe/solutions/pose)
 
-### 01. Solution APIs
+### 01. Pose Landmark Model (BlazePose GHUM 3D)
+
+![image01.PNG](https://github.com/hyunmin0317/OpenCV_Study/blob/master/MediaPipePose/MediaPipePose(Video)/Github/image01.PNG?raw=true)
+
+<br>
+
+### 02. Solution APIs
 
 * **Cross-platform Configuration Options**
   * MIN_DETECTION_CONFIDENCE
@@ -23,7 +29,7 @@
 
 <br>
 
-### 02. Python Solution API
+### 03. Python Solution API
 
 ```python
 import cv2
@@ -66,7 +72,7 @@ cap.release()
 
 <br>
 
-###  03. MediaPipe Pose Video Result
+###  04. MediaPipe Pose Video Result
 
 ![result.PNG](https://github.com/hyunmin0317/OpenCV_Study/blob/master/MediaPipePose/MediaPipePose(Video)/Github/result.PNG?raw=true)
 
