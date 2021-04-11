@@ -76,3 +76,17 @@ cap.release()
 
 ![result.PNG](https://github.com/hyunmin0317/OpenCV_Study/blob/master/MediaPipePose/MediaPipePose(Video)/Github/result.PNG?raw=true)
 
+<br>
+
+### 05. Find landmark coordinates
+
+* **이미지의 전체 landmark 구하기**
+
+  * `print(results.pose_landmarks)`
+
+    
+
+* **특정 landmark의 값 구하기**
+
+  * 
+

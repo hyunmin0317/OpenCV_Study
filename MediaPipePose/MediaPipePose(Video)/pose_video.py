@@ -31,6 +31,7 @@ with mp_pose.Pose(
     mp_drawing.draw_landmarks(
         image, results.pose_landmarks, mp_pose.POSE_CONNECTIONS)
     cv2.imshow('MediaPipe Pose', image)
+    print(results.pose_landmarks)
     if cv2.waitKey(5) & 0xFF == 27:
       break
 cap.release()
