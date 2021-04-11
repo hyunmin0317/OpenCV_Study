@@ -17,7 +17,7 @@ with mp_pose.Pose(
       # If loading a video, use 'break' instead of 'continue'.
       continue
 
- #   image_height, image_width, _ = image.shape
+    image_height, image_width, _ = image.shape
 
     # Flip the image horizontally for a later selfie-view display, and convert
     # the BGR image to RGB.

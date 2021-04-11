@@ -100,7 +100,7 @@ cap.release()
     print("nose 좌표:",nose_x, nose_y)
     ```
 
-    
+    ![image03.PNG](https://github.com/hyunmin0317/OpenCV_Study/blob/master/MediaPipePose/MediaPipePose(Video)/Github/image03.PNG?raw=true)
 
     
 
