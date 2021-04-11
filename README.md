@@ -26,6 +26,8 @@
   * ### [MediaPipe Pose](https://github.com/hyunmin0317/OpenCV_Study/blob/master/MediaPipePose/MediaPipePose.md)
   
   * ### [MediaPipe Holistic](https://github.com/hyunmin0317/OpenCV_Study/blob/master/MediaPipeHolistic/MediaPipeHolistic.md)
+  
+  * ### [NeckSlice](https://github.com/hyunmin0317/OpenCV_Study/blob/master/NeckSlice/Github/NeckSlice.md)
 
 <br>
 
