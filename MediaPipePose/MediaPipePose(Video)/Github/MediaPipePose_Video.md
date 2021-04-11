@@ -84,9 +84,23 @@ cap.release()
 
   * `print(results.pose_landmarks)`
 
-    
+    ![image02.PNG](https://github.com/hyunmin0317/OpenCV_Study/blob/master/MediaPipePose/MediaPipePose(Video)/Github/image02.PNG?raw=true)
 
 * **특정 landmark의 값 구하기**
 
-  * 
+  * 이미지의 가로, 세로 계산
+
+    `image_height, image_width, _ = image.shape`
+
+  * landmark 중 `nose` 좌표 출력
+
+    ```python
+    nose_x = results.pose_landmarks.landmark[mp_pose.PoseLandmark.NOSE].x * image_width
+    nose_y = results.pose_landmarks.landmark[mp_pose.PoseLandmark.NOSE].y * image_height
+    print("nose 좌표:",nose_x, nose_y)
+    ```
+
+    
+
+    
 

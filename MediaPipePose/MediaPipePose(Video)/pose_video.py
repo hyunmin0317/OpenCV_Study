@@ -17,6 +17,8 @@ with mp_pose.Pose(
       # If loading a video, use 'break' instead of 'continue'.
       continue
 
+ #   image_height, image_width, _ = image.shape
+
     # Flip the image horizontally for a later selfie-view display, and convert
     # the BGR image to RGB.
     image = cv2.cvtColor(cv2.flip(image, 1), cv2.COLOR_BGR2RGB)
@@ -31,7 +33,12 @@ with mp_pose.Pose(
     mp_drawing.draw_landmarks(
         image, results.pose_landmarks, mp_pose.POSE_CONNECTIONS)
     cv2.imshow('MediaPipe Pose', image)
-    print(results.pose_landmarks)
+    
+#   print(results.pose_landmarks)
+    nose_x = results.pose_landmarks.landmark[mp_pose.PoseLandmark.NOSE].x * image_width
+    nose_y = results.pose_landmarks.landmark[mp_pose.PoseLandmark.NOSE].y * image_height
+    print("nose 좌표:",nose_x, nose_y)
+
     if cv2.waitKey(5) & 0xFF == 27:
       break
 cap.release()
