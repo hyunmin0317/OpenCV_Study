@@ -34,7 +34,7 @@ with mp_pose.Pose(
         image, results.pose_landmarks, mp_pose.POSE_CONNECTIONS)
     cv2.imshow('MediaPipe Pose', image)
     
-#   print(results.pose_landmarks)
+#    print(results.pose_landmarks)
     nose_x = results.pose_landmarks.landmark[mp_pose.PoseLandmark.NOSE].x * image_width
     nose_y = results.pose_landmarks.landmark[mp_pose.PoseLandmark.NOSE].y * image_height
     print("nose 좌표:",nose_x, nose_y)
