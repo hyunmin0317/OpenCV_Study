@@ -86,6 +86,8 @@ cap.release()
 
     ![image02.PNG](https://github.com/hyunmin0317/OpenCV_Study/blob/master/MediaPipePose/MediaPipePose(Video)/Github/image02.PNG?raw=true)
 
+  <br>
+
 * **특정 landmark의 값 구하기**
 
   * 이미지의 가로, 세로 계산
