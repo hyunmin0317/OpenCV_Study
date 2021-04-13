@@ -33,7 +33,7 @@
 
 <br>
 
-## :computer: 팀원
+## :turtle: 팀원 
 
 > **최현민 [(hyunmin0317)](https://github.com/hyunmin0317?tab=repositories)**
 >
@@ -42,3 +42,11 @@
 > **배은기 [(BaeEunGi)](https://github.com/BaeEunGi)**
 >
 > **안선정 [(sunjungAn)](https://github.com/sunjungAn)**
+
+<br>
+
+## :computer: 팀원 레포 링크
+
+* https://github.com/hyeji1221/OpenCV
+* https://github.com/BaeEunGi/OpenCV_Learning
+* https://github.com/sunjungAn/Opencv_practice
