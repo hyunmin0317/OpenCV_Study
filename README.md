@@ -27,11 +27,11 @@
   
   * ### [MediaPipe Holistic](https://github.com/hyunmin0317/OpenCV_Study/blob/master/MediaPipeHolistic/MediaPipeHolistic.md)
   
-  * ### [NeckSlice(ver.1.0)](https://github.com/hyunmin0317/OpenCV_Study/blob/master/NeckSlice/NeckSlice(ver.1.0)/Github/NeckSlice.md)
+  * ### [NeckSlice(ver.1.0)](https://github.com/hyunmin0317/OpenCV_Study/blob/master/NeckSlice/NeckSlice(ver.1.0)/Github/NeckSlice(ver.1.0).md)
   
 * ### Week04 (04/18)
 
-  * ### NeckSlice(ver.2.0)
+  * ### [NeckSlice(ver.1.1)](https://github.com/hyunmin0317/OpenCV_Study/blob/master/NeckSlice/NeckSlice(ver.1.1)/Github/NeckSlice(ver.1.1).md)
 
 <br>
 
