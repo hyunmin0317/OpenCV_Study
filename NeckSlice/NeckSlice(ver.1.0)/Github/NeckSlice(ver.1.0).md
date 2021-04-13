@@ -1,4 +1,4 @@
-# NeckSlice
+# NeckSlice(ver.1.0)
 
 2021.04.11
 
@@ -29,7 +29,7 @@
   r = (my-sy)/(ny-my)
   ```
 
-  ![image01.PNG](https://github.com/hyunmin0317/OpenCV_Study/blob/master/NeckSlice/Github/image01.PNG?raw=true)
+  ![image01.PNG](https://github.com/hyunmin0317/OpenCV_Study/blob/master/NeckSlice/NeckSlice(ver.1.0)/Github/image01.PNG?raw=true)
 
 * 영상에서의 비율아 기준(사진에서의 비율 - 0.5)보다 작으면 현재 비율을 출력하고 'neckslice.jpg' 사진을 보여줌
 
@@ -127,4 +127,4 @@ cap.release()
 
 ###  03. NeckSlice Result
 
-![result.PNG](https://github.com/hyunmin0317/OpenCV_Study/blob/master/NeckSlice/Github/result.PNG?raw=true)
+![result.PNG](https://github.com/hyunmin0317/OpenCV_Study/blob/master/NeckSlice/NeckSlice(ver.1.0)/Github/result.PNG)
