@@ -35,6 +35,8 @@
   
 * ### Week05 (05/01)
 
+  * ### NeckSlice(ver.2.0)
+
 <br>
 
 ## :turtle: 팀원 
