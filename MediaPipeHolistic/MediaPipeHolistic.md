@@ -10,5 +10,5 @@
 
 * ### [MediaPipe Holistic (Image)](https://github.com/hyunmin0317/OpenCV_Study/blob/master/MediaPipeHolistic/MediaPipeHolistic(Image)/Github/MediaPipeHolistic_Image.md)
 
-* ### [MediaPipe Pose (Video)](https://github.com/hyunmin0317/OpenCV_Study/blob/master/MediaPipeHolistic/MediaPipeHolistic(Video)/Github/MediaPipeHolistic_Video.md)
+* ### [MediaPipe Holistic (Video)](https://github.com/hyunmin0317/OpenCV_Study/blob/master/MediaPipeHolistic/MediaPipeHolistic(Video)/Github/MediaPipeHolistic_Video.md)
 
