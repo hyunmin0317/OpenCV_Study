@@ -68,8 +68,6 @@ with mp_pose.Pose(
     mp_drawing.draw_landmarks(
         image, results.pose_landmarks, mp_pose.POSE_CONNECTIONS)
 
-    cv2.imshow('NeckSlice(ver.2.0)', image)
-
     if results.pose_landmarks is None:
       print("no landmark")
       continue
