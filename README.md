@@ -35,7 +35,7 @@
   
 * ### Week05 (05/01)
 
-  * ### NeckSlice(ver.2.0)
+  * ### [NeckSlice(ver.2.0)](https://github.com/hyunmin0317/OpenCV_Study/blob/master/NeckSlice/NeckSlice(ver.2.0)/Github/NeckSlice(ver.2.0).md)
 
 <br>
 
