@@ -14,4 +14,4 @@
 
 ###  02. NeckSlice(ver.2.0) Result
 
-![result.PNG]()
+![result.PNG](https://github.com/hyunmin0317/OpenCV_Study/blob/master/NeckSlice/NeckSlice(ver.2.0)/Github/result.PNG?raw=true)
