@@ -1,4 +1,4 @@
-# NeckSlice(ver.2.0)
+# NeckSlice(ver.1.2)
 
 2021.05.01
 
@@ -15,8 +15,8 @@
 
 ### 02. 예외처리 Result
 
-![result02.PNG](https://github.com/hyunmin0317/OpenCV_Study/blob/master/NeckSlice/NeckSlice(ver.2.0)/Github/result01.PNG)
+![result01.PNG](https://github.com/hyunmin0317/OpenCV_Study/blob/master/NeckSlice/NeckSlice(ver.1.2)/Github/result01.PNG?raw=true)
 
 ###  03. NeckSlice(ver.2.0) Result
 
-![result02.PNG](https://github.com/hyunmin0317/OpenCV_Study/blob/master/NeckSlice/NeckSlice(ver.2.0)/Github/result02.PNG)
+![result02.PNG](https://github.com/hyunmin0317/OpenCV_Study/blob/master/NeckSlice/NeckSlice(ver.1.2)/Github/result02.PNG?raw=true)
